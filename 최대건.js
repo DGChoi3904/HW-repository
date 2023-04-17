@@ -64,7 +64,9 @@ function examFive(array) {
   // 배열(array)만을 인자로 받아서 실행할 수 있도록 작성하시오.
   // 위와 동일. 해당 객체가 배열인지를 시작 단어로 구분.
   if(typeof(array) === 'object' && toString(array).startsWith(('['))){
+    //총합 저장용 변수
     let sum = 0;
+    //forEach로 매 인덱스바다 더함.
     array.forEach(value=>{
       sum += value;
     })
