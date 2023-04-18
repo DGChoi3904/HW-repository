@@ -42,6 +42,7 @@ function exampleTwo(array, divideNumber) {
 function exampleThree(array) {
   
   let value = 0;
+  //배열의 매 인덱스마다 해당하는 val 값을 value에 합친다
   array.forEach(val=>{ value += val });
   return value;
 }
@@ -49,10 +50,11 @@ function exampleThree(array) {
 function exampleFour(object) {
   let value = true;
   for(let key in object){
-
+    //만일 프로퍼티가 배열일 경우
     if(Array.isArray(object[key])){
-
+      //forEach로 매 인덱스마다 확인
       object[key].forEach(val=>{
+        //너는 숫자인가?
         if(typeof(val) !== "number" ){
           value = false;
         }
@@ -67,13 +69,17 @@ function exampleFour(object) {
 
 function exampleFive(objectOne, objectTwo) {
   let value = new Number;
+  //basicData가 들어온다는 가정하에, 모든 키의 값은 숫자인것으로 가정한 for-in문 사용
   for(let key in objectOne){
+    //있는 key수만큼 해당 값을 value에 저장
     value += objectOne[key];
   }
+  //exampleOne의 결과 객체를 사용하는것을 가정하여, exampleThree문을 써서 총함을 value에 더함.
   for(let keytwo in objectTwo){
+    //
     value += exampleThree(objectTwo[keytwo]);
   }
   return value;
 }
-
+//실행 구문
 console.log(exampleFive(basicData, exampleTwo(exampleOne(basicData.count,basicData.min, basicData.max), basicData.divideNumber)))
