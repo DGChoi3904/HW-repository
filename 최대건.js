@@ -94,6 +94,7 @@ class ExampleTwo {
     return this._header;
   }
   set header(obj){
+    //문자열인지 체크하는 구문. 다른 setter에도 동일하게 적용했다.
     if(typeof obj.content === 'string'){
       let styleCheck = true;
       for(let key in obj.style){
