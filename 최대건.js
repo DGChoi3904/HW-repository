@@ -61,7 +61,7 @@ function exampleOne(inputPrice, currency, basicData) {
       }
     })
     //만일 카운트가 0, 살수 있는 아이템이 없을 시.
-    if(result.count = 0){
+    if(result.count === 0){
       //잔액 부족을 output에 추가.
       result.output += "잔액이 부족합니다.\n";
       //만일 카운트가 10, 살 수 있는 모든 아이템만큼 있을 시.
@@ -71,12 +71,12 @@ function exampleOne(inputPrice, currency, basicData) {
     }
     return result;
   }
+
   // 함수 실행, 및 반환된 객체를 저장.
   const result = priceChecker(inputPrice);
 
   console.log(result.output);
-  
 }
 
 
-exampleOne(1000,currency,basicData);
+exampleOne(500,currency,basicData);
