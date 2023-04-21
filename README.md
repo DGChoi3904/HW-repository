@@ -26,7 +26,7 @@ chatGPT 질문으로 답을 빼내오는 경우,  20분 내외 소요 예상
 
 chatGPT 질문으로 답을 빼내오는 경우,  10분 내외 소요 예상
 직접 작성하여 로직을 제작하는 경우, 1시간 소요 예상
-## 2023SUS 4월 20일 과제
+## 2023년 월 20일 과제
 [exam] Note exam -4 | 기본기 다지기
 훈련생분들의 탄탄한 코딩 기본기 확립을 위해, 연습과제를 제작 및 교부합니다.
 
@@ -36,3 +36,38 @@ chatGPT 질문으로 답을 빼내오는 경우,  10분 내외 소요 예상
 
 chatGPT 질문으로 답을 빼내오는 경우,  30분 내외 소요 예상
 직접 작성하여 로직을 제작하는 경우, 1시간 30분 소요 예상
+## 2023년 4월 21일 과제
+[exam] Note exam -5 | 기본기 다지기
+훈련생분들의 탄탄한 코딩 기본기 확립을 위해, 연습과제를 제작 및 교부합니다.
+
+훈련생 성함으로된 파일업로드 기능으로 제출하시기 바랍니다.
+예시) 홍길동.js 
+※ 파일이 여러개 인경우 zip 파일로, 하나인 경우 .js 파일로 제출
+
+chatGPT 질문으로 답을 빼내오는 경우,  10분 내외 소요 예상
+직접 작성하여 로직을 제작하는 경우, 1시간 내외 소요 예상
+
+
+제공 데이터
+
+
+const basicData = [
+  { number: 1, name: "코카콜라", price: 1500 },
+  { number: 2, name: "사이다", price: 1200 },
+  { number: 3, name: "포카리스웨트", price: 1000 },
+  { number: 4, name: "칸쵸", price: 800 },
+  { number: 5, name: "오예스", price: 1000 },
+  { number: 6, name: "초코파이", price: 1200 },
+  { number: 7, name: "허니버터칩", price: 1500 },
+  { number: 8, name: "새우깡", price: 900 },
+  { number: 9, name: "치즈볼", price: 1200 },
+  { number: 10, name: "신라면", price: 900 }
+];
+
+const currency = {
+  thousand: { value: 1000, name: "일천원권" },
+  fiveThousand: { value: 5000, name: "오천원권" },
+  tenThousand: { value: 10000, name: "일만원권" },
+  fiveHundred: { value: 500, name: "오백원" },
+  hundred: { value: 100, name: "일백원" }
+};
