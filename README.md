@@ -71,3 +71,35 @@ const currency = {
   fiveHundred: { value: 500, name: "오백원" },
   hundred: { value: 100, name: "일백원" }
 };
+
+## 2023년 4월 24일 과제
+[exam] Note exam -6 | 기본기 다지기
+훈련생분들의 탄탄한 코딩 기본기 확립을 위해, 연습과제를 제작 및 교부합니다.
+
+훈련생 성함으로된 파일업로드 기능으로 제출하시기 바랍니다.
+예시) 홍길동.js 
+※ 파일이 여러개 인경우 zip 파일로, 하나인 경우 .js 파일로 제출
+
+chatGPT 질문으로 답을 빼내오는 경우,  5분 내외 소요 예상
+직접 작성하여 로직을 제작하는 경우, 30분 ~ 1시간 내외 소요 예상
+
+
+let basicData = {
+  header : {
+    id: "header",
+    type: "div",
+    children: null,
+  },
+  main : {
+    id: "main",
+    type: "div",
+    children: null,
+  },
+  footer : {
+    id: "footer",
+    type: "div",
+    children: null,
+  }
+}
+
+let elementData = ["게시판", "수업과제", "사용자", "성적", "로그아웃"];
