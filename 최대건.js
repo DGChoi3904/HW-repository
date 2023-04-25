@@ -119,6 +119,6 @@ const testOne = new TargetFinderFromArray(basicData, "string", "어디선가")
 
 console.log(testOne)
 testOne.dataType = "number"
-console.log(testOne)
+console.log(testOne.result)
 
 //걸린시간 약 2시간!
