@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "inquirer": "^9.2.0"
+  },
+  "name": "hw-repository",
+  "description": "[exam] Note exam -1 | 기본기 다지기\r 훈련생분들의 탄탄한 코딩 기본기 확립을 위해, 연습과제를 제작 및 교부합니다.",
+  "version": "0.0.1",
+  "main": "최대건.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DGChoi3904/HW-repository.git"
+  },
+  "keywords": [
+    "inquirer"
+  ],
+  "author": "DGchoi3904",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DGChoi3904/HW-repository/issues"
+  },
+  "homepage": "https://github.com/DGChoi3904/HW-repository#readme",
+  "type": "module"
+}
