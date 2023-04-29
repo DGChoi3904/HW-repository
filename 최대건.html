@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    button {
+      border-radius: 5px;
+      color: #333;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="move-button">move!</button>
+  <div id="root">
+    <!-- 첫번째 부모 first -->
+    <div id="first">
+      <ul>
+        <li>first-1</li>
+        <li>first-2</li>
+        <li>first-3</li>
+      </ul>
+    </div>
+    <!-- 두번째 부모 second -->
+    <div id="second">
+      <ul>
+        <li>second-1</li>
+        <li>second-2</li>
+        <li>second-3</li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    const first = document.getElementById('first');
+    const second = document.getElementById('second');
+    const moveButton = document.getElementById('move-button');
+    
+    // Q.1 식별자 moveButton을 누르면, first의 첫번째 자식을 second의 마지막 자식으로 이동시키는 코드를 작성해주세요.
+    // 사전작업, 각 ul을 변수로 정의하여 연결함
+    const firstUl = first.children[0];
+    const secondUl = second.children[0];
+    // root을 변수로 정의하여 연결함
+    const root = document.getElementById('root');
+    // 이벤트리스너를 추가 및 버튼 클릭시 이벤트 실행
+    moveButton.addEventListener("click", event=>{
+      // 클릭이 실행될 경우, 첫번째 ul의 첫번째 자식을 두번째 ul의 뒤에 붙임.
+      secondUl.appendChild(firstUl.children[0])
+      // Q.2 #first 의 ul 태그의 자식들이(li태그)가 모두 second로 이동했다면,
+      // 추가후 매번 두번쨰 ul의 chlidren.length를 비교함. 만일 두 ul의 길이의 총합일시 실행되는 구문
+      if(secondUl.children.length === firstUl.children.length + secondUl.children.length){
+        // Q.3 모든 #root 태그의 모든 자식을 삭제 하여 사실상 백지화를 시키세요.
+        //타임아웃 설정. 1초후에 root의 모든 엘리먼트 삭제
+        setTimeout(()=>{
+          root.innerHTML= ""
+          // Q.4 1초뒤에 "hello!" 라는 문구가 나타나게 하세요.
+          //여기에 타임아웃 설정, hello 글자크기 20px을 1초후에 팝업
+          setTimeout(()=>{
+            root.style.fontSize = "20px";
+            root.textContent = "hello!"
+          },1000)
+        },1000)
+      }
+    })
+// Q.1 식별자 moveButton을 누르면, first의 첫번째 자식을 second의 마지막 자식으로 이동시키는 코드를 작성해주세요.
+// Q.2 #first 의 ul 태그의 자식들이(li태그)가 모두 second로 이동했다면,
+// Q.3 모든 #root 태그의 모든 자식을 삭제 하여 사실상 백지화를 시키세요.
+// Q.4 1초뒤에 "hello!" 라는 문구가 나타나게 하세요.
+  </script>
+</body>
+
+</html>
